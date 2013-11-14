@@ -64,15 +64,11 @@ def draw(canvas):
 		ball_vel[1] = -ball_vel[1]
 
 # collide ball off paddle
-	if ball_pos[0] + HALF_BALL_WIDTH >= paddle1_pos[0] - HALF_PADDLE_WIDTH \
-	and ball_pos[0] - HALF_BALL_WIDTH <= paddle1_pos[0] + HALF_PADDLE_WIDTH \
-	and ball_pos[1] + HALF_BALL_HEIGHT >= paddle1_pos[1] - HALF_PADDLE_HEIGHT \
-	and ball_pos[1] - HALF_BALL_HEIGHT <= paddle1_pos[1] + HALF_PADDLE_HEIGHT:
-		ball_vel[0] = -ball_vel[0]
-	elif 	else:
-		ball_vel[0] = ball_vel[0]
-
-
+	if ((ball_pos[0] + HALF_BALL_WIDTH > paddle1_pos[0] - HALF_PADDLE_WIDTH) \
+	or (ball_pos[0] - HALF_BALL_WIDTH < paddle1_pos[0] + HALF_PADDLE_WIDTH)) \
+	and ball_pos[1] + HALF_BALL_WIDTH > paddle1_pos[1] - HALF_PADDLE_HEIGHT \
+	and ball_pos[1] - HALF_BALL_HEIGHT < paddle1_pos[1] + HALF_PADDLE_HEIGHT: \
+			ball_vel[0] = -ball_vel[0]
 
 # KEYUP AND KEYDOWN HANDLERS
 def keydown(key):

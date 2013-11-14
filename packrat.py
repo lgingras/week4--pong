@@ -28,3 +28,26 @@
 #now try with polygon
 
 
+#working but just on vertial
+	if ball_pos[0] + HALF_BALL_WIDTH >= paddle1_pos[0] - HALF_PADDLE_WIDTH \
+	and ball_pos[0] - HALF_BALL_WIDTH <= paddle1_pos[0] + HALF_PADDLE_WIDTH:
+		ball_vel[0] = -ball_vel[0]
+	else:
+		ball_vel[0] = ball_vel[0]
+
+	if ball_pos[0] > paddle1_pos[0] - HALF_PADDLE_WIDTH \
+	and ball_pos[1] > paddle1_pos[1] - half_paddle
+		ball_vel[0] = -ball_vel[0]
+	else:
+		ball_vel[0] = ball_vel[0]
+
+
+		#closest working
+			if ball_pos[0] + HALF_BALL_WIDTH >= paddle1_pos[0] - HALF_PADDLE_WIDTH \
+	and ball_pos[0] - HALF_BALL_WIDTH <= paddle1_pos[0] + HALF_PADDLE_WIDTH \
+	and ball_pos[1] + HALF_BALL_HEIGHT >= paddle1_pos[1] - HALF_PADDLE_HEIGHT \
+	and ball_pos[1] - HALF_BALL_HEIGHT <= paddle1_pos[1] + HALF_PADDLE_HEIGHT:
+		ball_vel[0] = -ball_vel[0]
+		ball_vel[1] = -ball_vel[1]
+	else:
+		ball_vel[0] = ball_vel[0]
