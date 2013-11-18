@@ -1,3 +1,7 @@
+# lee is making comments
+# comments right here
+#to test out some stuff
+
 # Implementation of classic arcade game Pong
 
 import simplegui
